@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$("document").ready(function(){
+		$("#close1").click(function(){		// 중복ID	
+			opener.$("#id").val("").focus();
+			window.close();
+		});
+		$("#close2").click(function(){		// 사용 가능한 ID
+			opener.$("#passwd").focus();
+			window.close();
+		});
+	});
+</script>
+
+<c:if test="${result==1 }">
+중복 아이디 입니다.
+<input type=button value="닫기" id="close1">
+</c:if>
+<c:if test="${result==0 }">
+사용 가능한 아이디 입니다.
+<input type=button value="닫기" id="close2">
+</c:if>
+
+
+

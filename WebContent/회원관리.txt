@@ -1,0 +1,47 @@
+회원관리
+
+테이블 : member
+
+id  varchar2(20)    pk
+passwd  varchar2(20) not null
+name varchar2(20) not null
+jumin1 varchar2(6) not null
+jumin2 varchar2(7) not null
+email  varchar2(30) 
+tel varchar2(30)
+phone varchar2(30)
+postcode varchar2(10)
+address varchar2(200)
+gender varchar2(20)
+hobby varchar2(50)
+intro varchar2(2000)
+register timestamp
+
+
+프로젝트: model2member
+Controller클래스: controller - MemberController.java
+
+DTO클래스: dto - MemberDTO.java (DTO 클래스)
+DAO클래스: dao - MemberDAO.java (DAO 클래스)
+
+Action 인터페이스  :   service - Action.java (다형성 기능)
+ActionForward클래스 : service - ActionForward.java
+Service 클래스 : service - MemberInsert.java (회원가입)
+		        IdCheck.java(ID중복검사)
+		        Login.java(로그인)
+		        Logout.java(로그아웃)
+		        UpdateMember.java(정보수정)	
+		        DeleteMember.java(정보삭제)
+
+
+회원가입폼 : member.html --> member.jsp
+
+ID중복검사 : idcheck.jsp
+
+로그인 폼 : loginForm.jsp --> login.jsp
+
+수정 폼 : updateMember.jsp --> update.jsp
+
+삭제 폼 : deleteMember.jsp  --> delete.jsp
+
+로그아웃 : logout.jsp
